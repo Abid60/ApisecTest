@@ -1,0 +1,1070 @@
+---
+parent: Api_articles
+name: ApiArticlesPostAnonymousInvalid
+description: '**PreAuthorize:** hasPermission(authentication, ''article_write'')'
+authors:
+- apisec Bot
+type: SUITE
+init: []
+path: /api/articles
+endpoint: /api/articles
+method: POST
+auth: Anonymous
+headers:
+- 'Accept: application/json'
+- 'Content-Type: application/json'
+testCases:
+- id: 1
+  body: |-
+    {
+      "article" : {
+        "InitialisedIndicator" : "{{@RandomInteger}}",
+        "aUDField1" : {
+          "data" : { }
+        },
+        "aUDField10" : {
+          "data" : { }
+        },
+        "aUDField100" : {
+          "data" : { }
+        },
+        "aUDField11" : {
+          "data" : { }
+        },
+        "aUDField12" : {
+          "data" : { }
+        },
+        "aUDField13" : {
+          "data" : { }
+        },
+        "aUDField14" : {
+          "data" : { }
+        },
+        "aUDField15" : {
+          "data" : { }
+        },
+        "aUDField16" : {
+          "data" : { }
+        },
+        "aUDField17" : {
+          "data" : { }
+        },
+        "aUDField18" : {
+          "data" : { }
+        },
+        "aUDField19" : {
+          "data" : { }
+        },
+        "aUDField2" : {
+          "data" : { }
+        },
+        "aUDField20" : {
+          "data" : { }
+        },
+        "aUDField21" : {
+          "data" : { }
+        },
+        "aUDField22" : {
+          "data" : { }
+        },
+        "aUDField23" : {
+          "data" : { }
+        },
+        "aUDField24" : {
+          "data" : { }
+        },
+        "aUDField25" : {
+          "data" : { }
+        },
+        "aUDField26" : {
+          "data" : { }
+        },
+        "aUDField27" : {
+          "data" : { }
+        },
+        "aUDField28" : {
+          "data" : { }
+        },
+        "aUDField29" : {
+          "data" : { }
+        },
+        "aUDField3" : {
+          "data" : { }
+        },
+        "aUDField30" : {
+          "data" : { }
+        },
+        "aUDField31" : {
+          "data" : { }
+        },
+        "aUDField32" : {
+          "data" : { }
+        },
+        "aUDField33" : {
+          "data" : { }
+        },
+        "aUDField34" : {
+          "data" : { }
+        },
+        "aUDField35" : {
+          "data" : { }
+        },
+        "aUDField36" : {
+          "data" : { }
+        },
+        "aUDField37" : {
+          "data" : { }
+        },
+        "aUDField38" : {
+          "data" : { }
+        },
+        "aUDField39" : {
+          "data" : { }
+        },
+        "aUDField4" : {
+          "data" : { }
+        },
+        "aUDField40" : {
+          "data" : { }
+        },
+        "aUDField41" : {
+          "data" : { }
+        },
+        "aUDField42" : {
+          "data" : { }
+        },
+        "aUDField43" : {
+          "data" : { }
+        },
+        "aUDField44" : {
+          "data" : { }
+        },
+        "aUDField45" : {
+          "data" : { }
+        },
+        "aUDField46" : {
+          "data" : { }
+        },
+        "aUDField47" : {
+          "data" : { }
+        },
+        "aUDField48" : {
+          "data" : { }
+        },
+        "aUDField49" : {
+          "data" : { }
+        },
+        "aUDField5" : {
+          "data" : { }
+        },
+        "aUDField50" : {
+          "data" : { }
+        },
+        "aUDField51" : {
+          "data" : { }
+        },
+        "aUDField52" : {
+          "data" : { }
+        },
+        "aUDField53" : {
+          "data" : { }
+        },
+        "aUDField54" : {
+          "data" : { }
+        },
+        "aUDField55" : {
+          "data" : { }
+        },
+        "aUDField56" : {
+          "data" : { }
+        },
+        "aUDField57" : {
+          "data" : { }
+        },
+        "aUDField58" : {
+          "data" : { }
+        },
+        "aUDField59" : {
+          "data" : { }
+        },
+        "aUDField6" : {
+          "data" : { }
+        },
+        "aUDField60" : {
+          "data" : { }
+        },
+        "aUDField61" : {
+          "data" : { }
+        },
+        "aUDField62" : {
+          "data" : { }
+        },
+        "aUDField63" : {
+          "data" : { }
+        },
+        "aUDField64" : {
+          "data" : { }
+        },
+        "aUDField65" : {
+          "data" : { }
+        },
+        "aUDField66" : {
+          "data" : { }
+        },
+        "aUDField67" : {
+          "data" : { }
+        },
+        "aUDField68" : {
+          "data" : { }
+        },
+        "aUDField69" : {
+          "data" : { }
+        },
+        "aUDField7" : {
+          "data" : { }
+        },
+        "aUDField70" : {
+          "data" : { }
+        },
+        "aUDField71" : {
+          "data" : { }
+        },
+        "aUDField72" : {
+          "data" : { }
+        },
+        "aUDField73" : {
+          "data" : { }
+        },
+        "aUDField74" : {
+          "data" : { }
+        },
+        "aUDField75" : {
+          "data" : { }
+        },
+        "aUDField76" : {
+          "data" : { }
+        },
+        "aUDField77" : {
+          "data" : { }
+        },
+        "aUDField78" : {
+          "data" : { }
+        },
+        "aUDField79" : {
+          "data" : { }
+        },
+        "aUDField8" : {
+          "data" : { }
+        },
+        "aUDField80" : {
+          "data" : { }
+        },
+        "aUDField81" : {
+          "data" : { }
+        },
+        "aUDField82" : {
+          "data" : { }
+        },
+        "aUDField83" : {
+          "data" : { }
+        },
+        "aUDField84" : {
+          "data" : { }
+        },
+        "aUDField85" : {
+          "data" : { }
+        },
+        "aUDField86" : {
+          "data" : { }
+        },
+        "aUDField87" : {
+          "data" : { }
+        },
+        "aUDField88" : {
+          "data" : { }
+        },
+        "aUDField89" : {
+          "data" : { }
+        },
+        "aUDField9" : {
+          "data" : { }
+        },
+        "aUDField90" : {
+          "data" : { }
+        },
+        "aUDField91" : {
+          "data" : { }
+        },
+        "aUDField92" : {
+          "data" : { }
+        },
+        "aUDField93" : {
+          "data" : { }
+        },
+        "aUDField94" : {
+          "data" : { }
+        },
+        "aUDField95" : {
+          "data" : { }
+        },
+        "aUDField96" : {
+          "data" : { }
+        },
+        "aUDField97" : {
+          "data" : { }
+        },
+        "aUDField98" : {
+          "data" : { }
+        },
+        "aUDField99" : {
+          "data" : { }
+        },
+        "abcClass" : "{{@Random}}",
+        "abcClassCriterion" : "{{@Random}}",
+        "abcClassImport" : "{{@Random}}",
+        "abcClassSales" : "{{@Random}}",
+        "abcClassStock" : "{{@Random}}",
+        "accuracyDistribution" : "{{@RandomInteger}}",
+        "accuracyML" : "{{@RandomInteger}}",
+        "actualBuyingPrice" : "{{@RandomInteger}}",
+        "actualToOrder" : { },
+        "adjustmentCoverPeriod" : "{{@RandomInteger}}",
+        "adjustments" : [ {
+          "adjustmentDate" : [ "{{@Random}}" ],
+          "adjustmentInventoryDate" : [ "{{@Random}}" ],
+          "adjustmentName" : "{{@Random}}",
+          "adjustmentOrigin" : "{{@Random}}",
+          "adjustmentQuantity" : [ ],
+          "adjustmentType" : "{{@RandomInteger}}"
+        } ],
+        "aggregateSaveInfo" : {
+          "applyGenToVariants" : false,
+          "autoScaling" : false,
+          "autoUpdate" : "{{@RandomInteger}}",
+          "curveExceptionCode" : "{{@Random}}",
+          "curveProfile" : "{{@Random}}",
+          "defaultIMProfile" : "{{@Random}}",
+          "excludeActive" : false,
+          "excludeUser" : false,
+          "forecastStartWeek" : "{{@RandomInteger}}",
+          "isCustomerRecord" : false,
+          "isGeneric" : false,
+          "isMain" : false,
+          "isMainWithIM" : false,
+          "isSatellite" : false,
+          "isVariant" : false,
+          "lastSalesMonth" : "{{@RandomInteger}}",
+          "noLocations" : "{{@RandomInteger}}",
+          "noLocationsZeroFC" : "{{@RandomInteger}}",
+          "relatedWarehouse" : "{{@Random}}",
+          "seasonalProfile" : false,
+          "updateCustomerMain" : false,
+          "updateMain" : false,
+          "updateSatellites" : false
+        },
+        "appliedSeasonalPattern" : {
+          "adjuster1" : "{{@RandomInteger}}",
+          "adjuster10" : "{{@RandomInteger}}",
+          "adjuster11" : "{{@RandomInteger}}",
+          "adjuster12" : "{{@RandomInteger}}",
+          "adjuster2" : "{{@RandomInteger}}",
+          "adjuster3" : "{{@RandomInteger}}",
+          "adjuster4" : "{{@RandomInteger}}",
+          "adjuster5" : "{{@RandomInteger}}",
+          "adjuster6" : "{{@RandomInteger}}",
+          "adjuster7" : "{{@RandomInteger}}",
+          "adjuster8" : "{{@RandomInteger}}",
+          "adjuster9" : "{{@RandomInteger}}",
+          "isPasswordProtected" : false,
+          "isUsed" : false,
+          "origin" : "{{@RandomInteger}}",
+          "seasonalAdjustersCode" : "{{@Random}}",
+          "seasonalNumberOfYears" : "{{@RandomInteger}}",
+          "seasonalProbability" : "{{@RandomInteger}}",
+          "seasonalProbabilityThreshold" : "{{@RandomInteger}}"
+        },
+        "articleChangeLog" : [ {
+          "auditMessage" : "{{@Random}}",
+          "changeDate" : "{{@RandomInteger}}",
+          "changedField" : "{{@Random}}",
+          "newValue" : "{{@Random}}",
+          "oldValue" : "{{@Random}}",
+          "userAction" : "{{@RandomInteger}}",
+          "userName" : "{{@Faker.name.username}}"
+        } ],
+        "articleCode" : "{{@Random}}",
+        "articleExtra1" : "{{@RandomInteger}}",
+        "articleExtra2" : "{{@RandomInteger}}",
+        "articleExtra3" : "{{@RandomInteger}}",
+        "articleNote" : "{{@RandomInteger}}",
+        "articlePriceDiscounts" : [ {
+          "active" : false,
+          "discount" : "{{@RandomInteger}}",
+          "discountType" : "{{@RandomInteger}}",
+          "purchaseContractNumber" : "..etc",
+          "rangeFrom" : "{{@RandomInteger}}",
+          "rangeTo" : "{{@RandomInteger}}"
+        } ],
+        "articlePurchaseOrders" : [ {
+          "adjustment" : "{{@RandomInteger}}",
+          "arrivalDate" : "{{@Random}}",
+          "coAddition" : "{{@RandomDouble | 4}}",
+          "dataValid" : false,
+          "dayNumber" : "{{@RandomInteger}}",
+          "forecast" : "{{@RandomInteger}}",
+          "incoming" : "{{@RandomDouble | 4}}",
+          "onHand" : "{{@RandomDouble | 4}}",
+          "onOrder" : "{{@RandomDouble | 4}}",
+          "orderDate" : "{{@Random}}",
+          "ordersPlaced" : false,
+          "outgoing" : "{{@RandomDouble | 4}}",
+          "purchaseForecast" : "{{@RandomDouble | 4}}",
+          "toOrder" : "{{@RandomDouble | 4}}",
+          "totalConfirmed" : "{{@RandomDouble | 4}}",
+          "weekNumber" : "{{@RandomInteger}}",
+          "weekendStock" : "{{@RandomDouble | 4}}"
+        } ],
+        "articleSeasonalPattern" : {
+          "adjuster1" : "{{@RandomInteger}}",
+          "adjuster10" : "{{@RandomInteger}}",
+          "adjuster11" : "{{@RandomInteger}}",
+          "adjuster12" : "{{@RandomInteger}}",
+          "adjuster2" : "{{@RandomInteger}}",
+          "adjuster3" : "{{@RandomInteger}}",
+          "adjuster4" : "{{@RandomInteger}}",
+          "adjuster5" : "{{@RandomInteger}}",
+          "adjuster6" : "{{@RandomInteger}}",
+          "adjuster7" : "{{@RandomInteger}}",
+          "adjuster8" : "{{@RandomInteger}}",
+          "adjuster9" : "{{@RandomInteger}}",
+          "isPasswordProtected" : false,
+          "isUsed" : false,
+          "origin" : "{{@RandomInteger}}",
+          "seasonalAdjustersCode" : "{{@Random}}",
+          "seasonalNumberOfYears" : "{{@RandomInteger}}",
+          "seasonalProbability" : "{{@RandomInteger}}",
+          "seasonalProbabilityThreshold" : "{{@RandomInteger}}"
+        },
+        "articleStatus" : "{{@Random}}",
+        "articleType" : "{{@RandomInteger}}",
+        "articleWeekAdjusters" : [ {
+          "type" : "{{@RandomInteger}}",
+          "value" : "{{@RandomInteger}}",
+          "week" : "{{@RandomInteger}}"
+        } ],
+        "averageDemand" : "{{@RandomInteger}}",
+        "averageDemandLumpy" : "{{@RandomInteger}}",
+        "averageThreshold" : "{{@RandomInteger}}",
+        "backOrders" : { },
+        "barCode" : "{{@Random}}",
+        "bufferConstant" : { },
+        "bufferStock" : { },
+        "buyingPrice" : "{{@RandomInteger}}",
+        "calcDifference" : "{{@RandomInteger}}",
+        "calculatedLTDeviation" : "{{@RandomInteger}}",
+        "calculatedLeadTime" : "{{@RandomInteger}}",
+        "coAddition" : { },
+        "code" : "{{@Random}}",
+        "confidenceDistribution" : "{{@RandomInteger}}",
+        "confidenceML" : "{{@RandomInteger}}",
+        "confirmedDemands" : "{{@RandomInteger}}",
+        "confirmedException" : "{{@RandomInteger}}",
+        "confirmedExtraOnDay" : "{{@RandomInteger}}",
+        "confirmedOrder" : {
+          "confirmedCode" : "{{@Random}}",
+          "confirmedOrder0" : "{{@RandomInteger}}",
+          "confirmedOrder1" : "{{@RandomInteger}}",
+          "confirmedOrder10" : "{{@RandomInteger}}",
+          "confirmedOrder11" : "{{@RandomInteger}}",
+          "confirmedOrder2" : "{{@RandomInteger}}",
+          "confirmedOrder3" : "{{@RandomInteger}}",
+          "confirmedOrder4" : "{{@RandomInteger}}",
+          "confirmedOrder5" : "{{@RandomInteger}}",
+          "confirmedOrder6" : "{{@RandomInteger}}",
+          "confirmedOrder7" : "{{@RandomInteger}}",
+          "confirmedOrder8" : "{{@RandomInteger}}",
+          "confirmedOrder9" : "{{@RandomInteger}}",
+          "numberOfOrders" : "{{@RandomInteger}}"
+        },
+        "constrainedSD" : "{{@RandomInteger}}",
+        "correlationCoefficient" : "{{@RandomInteger}}",
+        "coverDate" : "{{@Random}}",
+        "coverPeriod" : "{{@RandomInteger}}",
+        "coverSetting" : "{{@RandomInteger}}",
+        "coverTime" : "{{@RandomInteger}}",
+        "creationDate" : "{{@Random}}",
+        "criterium1" : "{{@RandomInteger}}",
+        "criterium2" : "{{@RandomInteger}}",
+        "criterium3" : "{{@RandomInteger}}",
+        "criterium4" : "{{@RandomInteger}}",
+        "currentOrderLines" : "{{@RandomInteger}}",
+        "customFilter" : "{{@Random}}",
+        "customerGroupId" : "{{@Random}}",
+        "customerGroupName" : "{{@Random}}",
+        "dailyDemandPlanningData" : [ {
+          "confirmedExtra" : "{{@RandomDouble | 4}}",
+          "date" : "{{@Random}}",
+          "eventForecast" : "{{@RandomDouble | 4}}",
+          "forecast" : "{{@RandomDouble | 4}}",
+          "weekNr" : "{{@RandomInteger}}"
+        } ],
+        "dayInWeek" : {
+          "day1" : "{{@RandomInteger}}",
+          "day2" : "{{@RandomInteger}}",
+          "day3" : "{{@RandomInteger}}",
+          "day4" : "{{@RandomInteger}}",
+          "day5" : "{{@RandomInteger}}",
+          "day6" : "{{@RandomInteger}}",
+          "day7" : "{{@RandomInteger}}",
+          "dayInWeekCode" : "{{@Random}}"
+        },
+        "dayWeighting" : "{{@RandomInteger}}",
+        "dayWeightingNow" : "{{@RandomInteger}}",
+        "daysOfInventoryOnHand" : "{{@RandomInteger}}",
+        "deflectionWeeklyAverage" : "{{@RandomInteger}}",
+        "deliveryHolidayMultiplier" : "{{@RandomInteger}}",
+        "demand0" : { },
+        "demand1" : { },
+        "demand10" : { },
+        "demand11" : { },
+        "demand12" : { },
+        "demand13" : { },
+        "demand14" : { },
+        "demand15" : { },
+        "demand16" : { },
+        "demand17" : { },
+        "demand18" : { },
+        "demand19" : { },
+        "demand2" : { },
+        "demand20" : { },
+        "demand21" : { },
+        "demand22" : { },
+        "demand23" : { },
+        "demand2YearsAgo" : "{{@RandomInteger}}",
+        "demand3" : { },
+        "demand4" : { },
+        "demand5" : { },
+        "demand6" : { },
+        "demand7" : { },
+        "demand8" : { },
+        "demand9" : { },
+        "demandClass" : "{{@RandomInteger}}",
+        "demandHistory" : [ {
+          "demand" : "{{@RandomInteger}}",
+          "historyMonth" : "{{@RandomInteger}}",
+          "historyYear" : "{{@RandomInteger}}"
+        } ],
+        "demandIndex" : "{{@RandomInteger}}",
+        "demandLastMonth" : "{{@RandomInteger}}",
+        "demandLastYear" : "{{@RandomInteger}}",
+        "demandPoints" : "{{@RandomInteger}}",
+        "demandSoFarThisMonth" : { },
+        "description" : "{{@Random}}",
+        "detectOutOfStock" : "{{@RandomInteger}}",
+        "economicOrderQuantity" : { },
+        "enableInsInvInTime" : "{{@RandomInteger}}",
+        "enablePFCSettingsInTime" : "{{@RandomInteger}}",
+        "eoqCalculated" : { },
+        "eoqLimitSetting" : "{{@RandomInteger}}",
+        "eoqLowerLimit" : { },
+        "eoqMargin" : "{{@RandomInteger}}",
+        "eoqResult" : { },
+        "eoqSales" : "{{@RandomInteger}}",
+        "eoqUpperLimit" : { },
+        "exceptionalDayInWeekProfiles" : [ {
+          "day1" : "{{@RandomInteger}}",
+          "day2" : "{{@RandomInteger}}",
+          "day3" : "{{@RandomInteger}}",
+          "day4" : "{{@RandomInteger}}",
+          "day5" : "{{@RandomInteger}}",
+          "day6" : "{{@RandomInteger}}",
+          "day7" : "{{@RandomInteger}}",
+          "dayInWeekCode" : "{{@Random}}",
+          "weekNr" : "{{@RandomInteger}}",
+          "weekStartDate" : "{{@Random}}"
+        } ],
+        "excludedDemand" : [ { } ],
+        "extendedDemand1" : [ { } ],
+        "extendedDemand2" : [ { } ],
+        "extendedDemand3" : [ { } ],
+        "extendedDemand4" : [ { } ],
+        "extendedDemand5" : [ { } ],
+        "extendedLeadTime" : "{{@RandomInteger}}",
+        "fCExcFlag" : "{{@RandomInteger}}",
+        "figuresAggregated" : "{{@RandomInteger}}",
+        "firstHit" : "{{@RandomInteger}}",
+        "forecast1" : "{{@RandomInteger}}",
+        "forecast10" : "{{@RandomInteger}}",
+        "forecast11" : "{{@RandomInteger}}",
+        "forecast12" : "{{@RandomInteger}}",
+        "forecast13" : "{{@RandomInteger}}",
+        "forecast14" : "{{@RandomInteger}}",
+        "forecast15" : "{{@RandomInteger}}",
+        "forecast16" : "{{@RandomInteger}}",
+        "forecast17" : "{{@RandomInteger}}",
+        "forecast18" : "{{@RandomInteger}}",
+        "forecast19" : "{{@RandomInteger}}",
+        "forecast2" : "{{@RandomInteger}}",
+        "forecast20" : "{{@RandomInteger}}",
+        "forecast21" : "{{@RandomInteger}}",
+        "forecast22" : "{{@RandomInteger}}",
+        "forecast23" : "{{@RandomInteger}}",
+        "forecast24" : "{{@RandomInteger}}",
+        "forecast25" : "{{@RandomInteger}}",
+        "forecast26" : "{{@RandomInteger}}",
+        "forecast27" : "{{@RandomInteger}}",
+        "forecast28" : "{{@RandomInteger}}",
+        "forecast29" : "{{@RandomInteger}}",
+        "forecast3" : "{{@RandomInteger}}",
+        "forecast30" : "{{@RandomInteger}}",
+        "forecast31" : "{{@RandomInteger}}",
+        "forecast32" : "{{@RandomInteger}}",
+        "forecast33" : "{{@RandomInteger}}",
+        "forecast34" : "{{@RandomInteger}}",
+        "forecast35" : "{{@RandomInteger}}",
+        "forecast36" : "{{@RandomInteger}}",
+        "forecast4" : "{{@RandomInteger}}",
+        "forecast5" : "{{@RandomInteger}}",
+        "forecast6" : "{{@RandomInteger}}",
+        "forecast7" : "{{@RandomInteger}}",
+        "forecast8" : "{{@RandomInteger}}",
+        "forecast9" : "{{@RandomInteger}}",
+        "forecastError" : "{{@RandomInteger}}",
+        "forecastException" : "{{@RandomInteger}}",
+        "forecastStartWeek" : "{{@RandomInteger}}",
+        "frozenConfirmedPeriod" : "{{@RandomInteger}}",
+        "futureWeekGraphData" : {
+          "data" : [ {
+            "confirmedExtra" : "{{@RandomInteger}}",
+            "forecast" : "{{@RandomInteger}}",
+            "maxStockProjected" : "{{@RandomInteger}}",
+            "minStockProjected" : "{{@RandomInteger}}",
+            "promotionForecast" : "{{@RandomInteger}}",
+            "weekofyear" : "{{@Random}}"
+          } ],
+          "validData" : false
+        },
+        "groupCode1" : "{{@Random}}",
+        "groupCode2" : "{{@Random}}",
+        "groupCode3" : "{{@Random}}",
+        "groupCode4" : "{{@Random}}",
+        "groupCode5" : "{{@Random}}",
+        "groupCode6" : "{{@Random}}",
+        "historicalDayDemand" : [ {
+          "day1" : "{{@RandomInteger}}",
+          "day2" : "{{@RandomInteger}}",
+          "day3" : "{{@RandomInteger}}",
+          "day4" : "{{@RandomInteger}}",
+          "day5" : "{{@RandomInteger}}",
+          "day6" : "{{@RandomInteger}}",
+          "day7" : "{{@RandomInteger}}",
+          "yearWk" : "{{@Random}}"
+        } ],
+        "historicalSeasonalAdjusters" : {
+          "adjusters" : [ ]
+        },
+        "hits2YearsAgo" : "{{@RandomInteger}}",
+        "hitsLastYear" : "{{@RandomInteger}}",
+        "holdFlag" : "{{@RandomInteger}}",
+        "holdingCost" : "{{@RandomInteger}}",
+        "holidayCalendar" : "{{@Random}}",
+        "hybrids" : [ {
+          "calculationError" : "{{@Random}}",
+          "dataType" : "{{@Random}}",
+          "dp" : "{{@RandomInteger}}",
+          "field1" : "{{@Random}}",
+          "field2" : "{{@Random}}",
+          "hybridId" : "{{@Random}}",
+          "hybridText" : "{{@Random}}",
+          "operator" : "{{@Random}}",
+          "rawValue" : "{{@RandomInteger}}",
+          "rawValue1" : "{{@RandomInteger}}",
+          "rawValue2" : "{{@RandomInteger}}",
+          "system" : false,
+          "value" : "{{@RandomInteger}}"
+        } ],
+        "incrementalOrderQuantity" : { },
+        "incrementalSellingQuantity" : { },
+        "insInvDateSet" : "{{@Random}}",
+        "insuranceInventory" : { },
+        "insuranceInventoryEndWeek" : "{{@Random}}",
+        "interfaceIndicator" : "{{@RandomInteger}}",
+        "inventoryException" : "{{@RandomInteger}}",
+        "ioqResult" : { },
+        "keepAddingPromoForecast" : "{{@RandomInteger}}",
+        "lastAverageDemand" : "{{@RandomInteger}}",
+        "lastDayOfCP" : "{{@Random}}",
+        "lastForecastUpdate" : "{{@Random}}",
+        "lastPromotion" : "{{@RandomInteger}}",
+        "lastPromotionType" : "{{@Random}}",
+        "lastPurchaseWeek" : "{{@RandomInteger}}",
+        "lastSalesMonth" : "{{@RandomInteger}}",
+        "lastSalesWeek" : "{{@Random}}",
+        "lastWeekAdjustment" : "{{@Random}}",
+        "leadTime" : "{{@RandomInteger}}",
+        "lifeCycleStatus" : "{{@RandomInteger}}",
+        "lockForUpdate" : "{{@RandomInteger}}",
+        "lostSales" : "{{@RandomInteger}}",
+        "lostSalesQty" : { },
+        "maxOrder" : "{{@RandomInteger}}",
+        "minOrder" : "{{@RandomInteger}}",
+        "minimalCoverRate" : "{{@RandomInteger}}",
+        "minimumOrderQuantity" : { },
+        "minimumSellingQuantity" : { },
+        "monthDeleteCount" : "{{@RandomInteger}}",
+        "monthlyFCodes" : [ {
+          "month" : "{{@Random}}",
+          "year" : "{{@RandomInteger}}"
+        } ],
+        "moveOutLevel" : "{{@RandomInteger}}",
+        "moveOutValue" : "{{@RandomInteger}}",
+        "networkImbalance" : { },
+        "newDemandClass" : "{{@RandomInteger}}",
+        "nonStocked" : "{{@RandomInteger}}",
+        "numberOfDemands" : "{{@RandomInteger}}",
+        "numberOfHits" : "{{@RandomInteger}}",
+        "orderAdviceDate" : "{{@Random}}",
+        "orderCost" : "{{@RandomInteger}}",
+        "orderHolidaySetting" : "{{@RandomInteger}}",
+        "orderLevel" : { },
+        "orderLevelUC" : { },
+        "orderLines" : [ {
+          "orderLineMonth" : "{{@RandomInteger}}",
+          "orderLineYear" : "{{@RandomInteger}}",
+          "orderLines" : "{{@RandomInteger}}"
+        } ],
+        "orderQuantity" : { },
+        "orderValue" : "{{@RandomInteger}}",
+        "originalFCCP" : "{{@RandomInteger}}",
+        "outOfStock" : {
+          "articleCode" : "{{@Random}}",
+          "outOfStockRatio0" : "{{@RandomInteger}}",
+          "outOfStockRatio1" : "{{@RandomInteger}}",
+          "outOfStockRatio10" : "{{@RandomInteger}}",
+          "outOfStockRatio11" : "{{@RandomInteger}}",
+          "outOfStockRatio2" : "{{@RandomInteger}}",
+          "outOfStockRatio3" : "{{@RandomInteger}}",
+          "outOfStockRatio4" : "{{@RandomInteger}}",
+          "outOfStockRatio5" : "{{@RandomInteger}}",
+          "outOfStockRatio6" : "{{@RandomInteger}}",
+          "outOfStockRatio7" : "{{@RandomInteger}}",
+          "outOfStockRatio8" : "{{@RandomInteger}}",
+          "outOfStockRatio9" : "{{@RandomInteger}}"
+        },
+        "outOfSync" : "{{@RandomInteger}}",
+        "overwriteBufferStock" : "{{@RandomInteger}}",
+        "parameterCode" : "{{@Random}}",
+        "pfcSettingsWithPriority" : [ {
+          "coverTime" : "{{@RandomInteger}}",
+          "coverTimeSetting" : "{{@RandomInteger}}",
+          "insuranceInventory" : "{{@RandomInteger}}",
+          "insuranceInventorySetting" : "{{@RandomInteger}}",
+          "name" : "{{@Random}}",
+          "origin" : "{{@Random}}",
+          "periodEnd" : "{{@Random}}",
+          "periodStart" : "{{@Random}}",
+          "priority" : "{{@Random}}",
+          "targetDate" : "{{@RandomInteger}}",
+          "type" : "{{@RandomInteger}}"
+        } ],
+        "pfcSettingsWithoutPriority" : [ {
+          "coverTime" : "{{@RandomInteger}}",
+          "coverTimeSetting" : "{{@RandomInteger}}",
+          "insuranceInventory" : "{{@RandomInteger}}",
+          "insuranceInventorySetting" : "{{@RandomInteger}}",
+          "name" : "{{@Random}}",
+          "origin" : "{{@Random}}",
+          "periodEnd" : "{{@Random}}",
+          "periodStart" : "{{@Random}}",
+          "priority" : "{{@Random}}",
+          "targetDate" : "{{@RandomInteger}}",
+          "type" : "{{@RandomInteger}}"
+        } ],
+        "placeNextHit" : "{{@RandomInteger}}",
+        "plcPercentToCopy" : "{{@RandomInteger}}",
+        "posPerYear" : "{{@RandomInteger}}",
+        "positiveStockOnHandThisMonth" : "{{@RandomInteger}}",
+        "predecessors" : null,
+        "previousWeekDemand" : { },
+        "previousWeekOrderLines" : "{{@RandomInteger}}",
+        "primarySupplier" : "{{@Random}}",
+        "primarySupplierName" : "{{@Random}}",
+        "promotion" : {
+          "adjustment0" : "{{@RandomInteger}}",
+          "adjustment1" : "{{@RandomInteger}}",
+          "adjustment10" : "{{@RandomInteger}}",
+          "adjustment11" : "{{@RandomInteger}}",
+          "adjustment2" : "{{@RandomInteger}}",
+          "adjustment3" : "{{@RandomInteger}}",
+          "adjustment4" : "{{@RandomInteger}}",
+          "adjustment5" : "{{@RandomInteger}}",
+          "adjustment6" : "{{@RandomInteger}}",
+          "adjustment7" : "{{@RandomInteger}}",
+          "adjustment8" : "{{@RandomInteger}}",
+          "adjustment9" : "{{@RandomInteger}}",
+          "promotionCode" : "{{@Random}}",
+          "type0" : "{{@Random}}",
+          "type1" : "{{@Random}}",
+          "type10" : "{{@Random}}",
+          "type11" : "{{@Random}}",
+          "type2" : "{{@Random}}",
+          "type3" : "{{@Random}}",
+          "type4" : "{{@Random}}",
+          "type5" : "{{@Random}}",
+          "type6" : "{{@Random}}",
+          "type7" : "{{@Random}}",
+          "type8" : "{{@Random}}",
+          "type9" : "{{@Random}}"
+        },
+        "promotionException" : "{{@RandomInteger}}",
+        "promotionForecast" : [ { } ],
+        "promotionHistory" : [ { } ],
+        "proposedPromotionException" : "{{@RandomInteger}}",
+        "purchaseContractNumber" : "{{@Random}}",
+        "relevantWeeks" : "{{@RandomInteger}}",
+        "replenishmentScheduleId" : "{{@Random}}",
+        "resultantBufferStock" : { },
+        "reviewTime" : "{{@RandomInteger}}",
+        "reviewedBy" : "{{@Random}}",
+        "reviewedDate" : "{{@Random}}",
+        "roundedOrderQuantity" : { },
+        "runCode" : "{{@RandomInteger}}",
+        "salesPrice" : "{{@RandomInteger}}",
+        "seasonalCode" : "{{@Random}}",
+        "seasonalIndicator" : "{{@RandomInteger}}",
+        "seasonalRatio" : "{{@RandomInteger}}",
+        "seasonalStatus" : "{{@RandomInteger}}",
+        "seasonalYearWeights" : {
+          "yearWeight1" : "{{@RandomInteger}}",
+          "yearWeight2" : "{{@RandomInteger}}",
+          "yearWeight3" : "{{@RandomInteger}}",
+          "yearWeight4" : "{{@RandomInteger}}",
+          "yearWeight5" : "{{@RandomInteger}}"
+        },
+        "seasonalityOrderLines" : "{{@RandomInteger}}",
+        "seasonalityPattern" : "{{@Random}}",
+        "seasonalityTime" : "{{@RandomInteger}}",
+        "setToNonStockedBySuccessor" : false,
+        "smoothFactor" : "{{@RandomInteger}}",
+        "standardDeviation" : "{{@RandomInteger}}",
+        "statisticsException" : {
+          "exception0" : "{{@Random}}",
+          "exception1" : "{{@Random}}",
+          "exception10" : "{{@Random}}",
+          "exception11" : "{{@Random}}",
+          "exception12" : "{{@Random}}",
+          "exception13" : "{{@Random}}",
+          "exception14" : "{{@Random}}",
+          "exception15" : "{{@Random}}",
+          "exception16" : "{{@Random}}",
+          "exception17" : "{{@Random}}",
+          "exception18" : "{{@Random}}",
+          "exception19" : "{{@Random}}",
+          "exception2" : "{{@Random}}",
+          "exception20" : "{{@Random}}",
+          "exception21" : "{{@Random}}",
+          "exception22" : "{{@Random}}",
+          "exception23" : "{{@Random}}",
+          "exception24" : "{{@Random}}",
+          "exception25" : "{{@Random}}",
+          "exception26" : "{{@Random}}",
+          "exception27" : "{{@Random}}",
+          "exception28" : "{{@Random}}",
+          "exception29" : "{{@Random}}",
+          "exception3" : "{{@Random}}",
+          "exception30" : "{{@Random}}",
+          "exception31" : "{{@Random}}",
+          "exception32" : "{{@Random}}",
+          "exception33" : "{{@Random}}",
+          "exception34" : "{{@Random}}",
+          "exception35" : "{{@Random}}",
+          "exception36" : "{{@Random}}",
+          "exception37" : "{{@Random}}",
+          "exception38" : "{{@Random}}",
+          "exception39" : "{{@Random}}",
+          "exception4" : "{{@Random}}",
+          "exception40" : "{{@Random}}",
+          "exception41" : "{{@Random}}",
+          "exception42" : "{{@Random}}",
+          "exception43" : "{{@Random}}",
+          "exception44" : "{{@Random}}",
+          "exception45" : "{{@Random}}",
+          "exception46" : "{{@Random}}",
+          "exception47" : "{{@Random}}",
+          "exception48" : "{{@Random}}",
+          "exception49" : "{{@Random}}",
+          "exception5" : "{{@Random}}",
+          "exception50" : "{{@Random}}",
+          "exception51" : "{{@Random}}",
+          "exception52" : "{{@Random}}",
+          "exception53" : "{{@Random}}",
+          "exception54" : "{{@Random}}",
+          "exception55" : "{{@Random}}",
+          "exception56" : "{{@Random}}",
+          "exception57" : "{{@Random}}",
+          "exception58" : "{{@Random}}",
+          "exception59" : "{{@Random}}",
+          "exception6" : "{{@Random}}",
+          "exception7" : "{{@Random}}",
+          "exception8" : "{{@Random}}",
+          "exception9" : "{{@Random}}",
+          "statisticsExceptionCode" : "{{@Random}}"
+        },
+        "stockOnHand" : { },
+        "stockOnOrder" : { },
+        "stockOnOrderBy1" : { },
+        "stockOnOrderBy2" : { },
+        "stockOnOrderBy3" : { },
+        "stockOnOrderBy4" : { },
+        "stockOnOrderBy5" : { },
+        "stockOnOrderBy6" : { },
+        "stockOnOrderByDate1" : "{{@Random}}",
+        "stockOnOrderByDate2" : "{{@Random}}",
+        "stockOnOrderByDate3" : "{{@Random}}",
+        "stockOnOrderByDate4" : "{{@Random}}",
+        "stockOnOrderByDate5" : "{{@Random}}",
+        "stockOnOrderByDate6" : "{{@Random}}",
+        "stockRuleResult" : "{{@RandomInteger}}",
+        "successivecount" : "{{@RandomInteger}}",
+        "successors" : null,
+        "supplierArticleCode" : "{{@Random}}",
+        "supplierCode" : "{{@Random}}",
+        "supplierIncOrderQuantity" : { },
+        "supplierLeadTime" : "{{@RandomInteger}}",
+        "supplierMinOrderQuantity" : { },
+        "supplierReliability" : "{{@RandomInteger}}",
+        "supplierReliabilitySetting" : "{{@RandomInteger}}",
+        "supplyLimProfileId" : "{{@Random}}",
+        "targetServiceLevel" : "{{@RandomInteger}}",
+        "tasks" : [ {
+          "profile" : "{{@Random}}",
+          "reviewed" : "{{@RandomInteger}}",
+          "selectionCategory" : "{{@Random}}",
+          "selectionMainCategory" : "{{@RandomInteger}}"
+        } ],
+        "trackingSignal" : "{{@RandomInteger}}",
+        "trend" : "{{@RandomInteger}}",
+        "trendAdjuster" : {
+          "adjuster1" : "{{@RandomInteger}}",
+          "adjuster10" : "{{@RandomInteger}}",
+          "adjuster11" : "{{@RandomInteger}}",
+          "adjuster12" : "{{@RandomInteger}}",
+          "adjuster2" : "{{@RandomInteger}}",
+          "adjuster3" : "{{@RandomInteger}}",
+          "adjuster4" : "{{@RandomInteger}}",
+          "adjuster5" : "{{@RandomInteger}}",
+          "adjuster6" : "{{@RandomInteger}}",
+          "adjuster7" : "{{@RandomInteger}}",
+          "adjuster8" : "{{@RandomInteger}}",
+          "adjuster9" : "{{@RandomInteger}}",
+          "trendAdjustersCode" : "{{@Random}}"
+        },
+        "trendCode" : "{{@Random}}",
+        "uD1" : {
+          "data" : { }
+        },
+        "uD10" : {
+          "data" : { }
+        },
+        "uD11" : {
+          "data" : { }
+        },
+        "uD12" : {
+          "data" : { }
+        },
+        "uD13" : {
+          "data" : { }
+        },
+        "uD14" : {
+          "data" : { }
+        },
+        "uD15" : {
+          "data" : { }
+        },
+        "uD16" : "{{@Random}}",
+        "uD2" : {
+          "data" : { }
+        },
+        "uD3" : {
+          "data" : { }
+        },
+        "uD4" : {
+          "data" : { }
+        },
+        "uD5" : {
+          "data" : { }
+        },
+        "uD6" : {
+          "data" : { }
+        },
+        "uD7" : {
+          "data" : { }
+        },
+        "uD8" : {
+          "data" : { }
+        },
+        "uD9" : {
+          "data" : { }
+        },
+        "unit1" : { },
+        "unit2" : { },
+        "unit3" : { },
+        "unit4" : { },
+        "unit5" : { },
+        "unit6" : { },
+        "unitPrice" : "{{@RandomInteger}}",
+        "urgentDate" : "{{@Random}}",
+        "useBufferStock" : "{{@RandomInteger}}",
+        "useCalculatedLTDeviation" : "{{@RandomInteger}}",
+        "useCalculatedLeadTime" : "{{@RandomInteger}}",
+        "useOrderLevelUC" : "{{@RandomInteger}}",
+        "viewOnly" : "{{@RandomInteger}}",
+        "warehouse" : "{{@Random}}",
+        "weekAdjusters" : "{{@RandomInteger}}",
+        "yearlyDemand" : "{{@RandomInteger}}",
+        "yearlyDemandSetting" : "{{@RandomInteger}}",
+        "zeroStockOnHandThisMonth" : "{{@RandomInteger}}"
+      },
+      "auditMessage" : "{{@Random}}",
+      "jsonString" : "{{@Random}}",
+      "remarks" : [ {
+        "action" : "{{@RandomInteger}}",
+        "articleCode" : "{{@Random}}",
+        "auditMessage" : "{{@Random}}",
+        "changedField" : "{{@Random}}",
+        "newValue" : { },
+        "oldValue" : { },
+        "reasonId" : "{{@RandomInteger}}",
+        "username" : "{{@Faker.name.username}}"
+      } ]
+    }
+  inactive: false
+useCategoryAssertion: false
+assertions:
+- '@StatusCode == 401 OR @StatusCode == 403'
+cleanup: []
+severity: Critical
+category: Unsecured
+tags:
+- V1
+- OWASP-API2
+- OWASP-API7
+- OWASP - OTG-AUTHN-002
+- OWASP API Security Top 10
+- Broken Authentication
+- Security Misconfiguration
+- Non-Intrusive
+- '[2020 CWE TOP 24] CWE - 306'
+inactive: false
+policies:
+  initExec: Request
+  cleanupExec: Request
+  logger: DEBUG
+  timeoutSeconds: 300
+  repeatOnFailure: 0
+  repeat: 0
+  repeatModule: null
+  repeatDelay: 0
+  unmaskToken: false
+  postExecutionDelay: 0
+autoGenerated: true
