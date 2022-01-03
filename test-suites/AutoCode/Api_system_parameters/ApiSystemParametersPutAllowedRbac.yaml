@@ -1,0 +1,179 @@
+---
+parent: Api_system_parameters
+name: ApiSystemParametersPutAllowedRbac
+description: '**PreAuthorize:** hasPermission(authentication, ''parameters_write'')'
+authors:
+- apisec Bot
+type: SUITE
+init: []
+path: /api/system/parameters
+endpoint: /api/system/parameters
+method: PUT
+auth: ROLE_parameters_write
+headers:
+- 'Accept: application/json'
+- 'Content-Type: application/json'
+testCases:
+- id: 1
+  body: |-
+    {
+      "abcCombinedCode": 0,
+          "auditIndicator": 0,
+          "automatedPLCRemoval": 0,
+          "automatedUC": 0,
+          "averageSystemThreshold": 0,
+          "bGComment": "string",
+         "bGNumber": "string",
+         "balancedPercentage": 0,
+          "benefitCost": 0,
+         "categoryReview": 0,
+         "cdAdditionalLeadTime": 0,
+         "certificateCritical": 0,
+         "certificateWarning": 0,
+         "checkLevel": 0,
+        "cleanWeeks": 0,
+          "convertBackOrders": 0,
+          "copyCD": 0,
+         "copyPO": 0,
+         "copyStock": 0,
+          "correlationCoefientMultiplier": 0,
+         "dayDeviation": 0,
+          "deflectionWeeklyAverage": 0,
+          "demandPoints": 0,
+          "destinationConfirmedDate": "string",
+         "destinationWarehouse": "string",
+          "detectOutOfStock": 0,
+         "dynamicBufferStock": 0,
+         "economicOrderQuantity": 0,
+          "eoqMargin": 0,
+          "eoqPeriod": 0,
+          "eoqSales": 0,
+         "exceptionLevel": 0,
+         "exceptionalDemandLastWeek": 0,
+         "exceptionalDemandMultiplier": 0,
+          "excludeBOFromCO": 0,
+          "excludeFirstWeeks": 0,
+          "excludeMOQ": 0,
+          "excludeMonths": 0,
+          "flyerIndicator": 0,
+           "flyerLumpyIndicator": 0,
+           "hierarchyPrefix": "string",
+          "holdingCost": 0,
+          "imbalanceSetting": 0,
+          "incrementalOrderQuantity": 0,
+         "initialiseWeeks": 0,
+          "interestRate": 0,
+         "irregularUCMax": 0,
+          "irregularUCMin": 0,
+         "keepItemsNew": 0,
+          "keepNewDemand": 0,
+         "keepNewForecastStartWeek": 0,
+         "keepNewStock": 0,
+         "keepSeasonal": 0,
+         "largeTrendMultiplier": 0,
+         "leadTime": 0,
+          "logisticsUnits": 0,
+          "mFactor": 0,
+         "maxConst": 0,
+          "maxConstLumpy": 0,
+          "minConst": 0,
+          "minConstLumpy": 0,
+          "minimumBenefit": 0,
+          "minimumOrderQuantity": 0,
+         "minimumSeasonalFactor": 0,
+         "minimumServiceLevel": 0,
+          "minimumYearlyDemand": 0,
+          "monthsMovingAverage": 0,
+          "negativeTrendIndicator": 0,
+          "newAsIrregular": 0,
+         "newItemCount": 0,
+         "newWeekCount": 0,
+         "notOnStockFile": 0,
+          "openDays": 0,
+         "orderCost": 0,
+         "orderExport": 0,
+          "orderExportDelimiter": 0,
+          "outOfStockRatio": 0,
+         "outlierDetectionTransactionsEnabled": 0,
+          "overwritePODuringStock": 0,
+          "overwriteStockDuringStock": 0,
+          "parameterCode": "string",
+         "pfAddLeadTime": 0,
+          "pfNoOfWeeks": 0,
+          "pfcNoOfWeeksOnDay": 0,
+          "poTimeFence": 0,
+         "priceDiscounts": 0,
+         "pricePerDefault": 0,
+          "probabilityThreshold": 0,
+         "probabilityUDF": "string",
+          "promotionOverwritesForecast": 0,
+           "reviewTime": 0,
+          "roundDownLeadTime": 0,
+          "roundOrderAmount": 0,
+         "runCode": "string",
+          "seasonalDefault": 0,
+          "seasonalWeightingBasedOnOrderlines": 0,
+          "seasonalityAllClasses": 0,
+          "selectionExports": 0,
+          "setNonStocked": 0,
+          "smoothingConstant": 0,
+          "smoothingFactor": 0,
+          "standardDeviationNew": 0,
+            "storeInitialPurchaseOrderData": 0,
+          "substituteZeros": 0,
+           "successiveCount": 0,
+         "targetServiceLevel": 0,
+          "trackingConstantCritical": 0,
+         "trackingConstantWarning": 0,
+          "transactionsOutlierSettings": {
+           "accuracyThreshold": 0,
+           "automaticExclusion": 0,
+           "confidenceThreshold": 0,
+            "modelFeatures": [
+          {
+            "dataType": 0,
+            "featureIndex": 0,
+            "featureName": "string"
+          }
+          ],
+         "outlierThreshold": 0
+          },
+          "trendIndicator": 0,
+         "uD16IdentifiesSuccessor": 0,
+         "useArticleDiscounts": 0,
+          "useConfirmedDemand": 0,
+          "useDayOfWeek": 0,
+          "useEOQ": 0,
+           "useHistoricalPurchaseOrderData": 0,
+          "usePurchaseContract": 0,
+          "useSupplierData": 0,
+          "weeksOfHistoryToKeep": 0
+    }
+  inactive: false
+useCategoryAssertion: false
+assertions:
+- '@StatusCode != 401 AND @StatusCode != 403'
+cleanup: []
+severity: High
+category: RBAC
+tags:
+- V1
+- OWASP-API5
+- OWASP - OTG-IDENT-001
+- OWASP API Security Top 10
+- Broken Function Level Authorization
+- Endpoint_Access_Control
+- '[2020 CWE TOP 22 ] CWE - 269'
+inactive: false
+policies:
+  initExec: Request
+  cleanupExec: Request
+  logger: DEBUG
+  timeoutSeconds: 300
+  repeatOnFailure: 0
+  repeat: 0
+  repeatModule: null
+  repeatDelay: 0
+  unmaskToken: false
+  postExecutionDelay: 0
+autoGenerated: true
