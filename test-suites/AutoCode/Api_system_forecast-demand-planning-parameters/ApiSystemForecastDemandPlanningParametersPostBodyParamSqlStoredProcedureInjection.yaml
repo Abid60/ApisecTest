@@ -1,0 +1,209 @@
+---
+parent: Api_system_forecast-demand-planning-parameters
+name: ApiSystemForecastDemandPlanningParametersPostBodyParamSqlStoredProcedureInjection
+description: '**PreAuthorize:** hasPermission(authentication, ''parameters_write'')'
+authors:
+- apisec Bot
+type: SUITE
+init: []
+path: /api/system/forecast-demand-planning-parameters
+endpoint: /api/system/forecast-demand-planning-parameters
+method: POST
+auth: Default
+headers:
+- 'Accept: application/json'
+- 'Content-Type: application/json'
+testCases:
+- id: 1
+  body: |-
+    {
+      "forecastException" : [ {
+        "descriptionFcode" : "{{@Random}}",
+        "initialise" : "{{@RandomInteger}}",
+        "monitorSuccessive" : "{{@RandomInteger}}",
+        "numberOfDemands" : "{{@RandomInteger}}"
+      } ],
+      "parameters" : {
+        "abcCombinedCode" : "{{@RandomInteger}}",
+        "auditIndicator" : "{{@RandomInteger}}",
+        "automatedPLCRemoval" : "{{@RandomInteger}}",
+        "automatedUC" : "{{@RandomInteger}}",
+        "averageSystemThreshold" : "{{@RandomInteger}}",
+        "bGComment" : "{{@Injection}}",
+        "bGNumber" : "{{@Injection}}",
+        "balancedPercentage" : "{{@RandomInteger}}",
+        "benefitCost" : "{{@RandomInteger}}",
+        "categoryReview" : "{{@RandomInteger}}",
+        "cdAdditionalLeadTime" : "{{@RandomInteger}}",
+        "certificateCritical" : "{{@RandomInteger}}",
+        "certificateWarning" : "{{@RandomInteger}}",
+        "checkLevel" : "{{@RandomInteger}}",
+        "cleanWeeks" : "{{@RandomInteger}}",
+        "convertBackOrders" : "{{@RandomInteger}}",
+        "copyCD" : "{{@RandomInteger}}",
+        "copyPO" : "{{@RandomInteger}}",
+        "copyStock" : "{{@RandomInteger}}",
+        "correlationCoefientMultiplier" : "{{@RandomInteger}}",
+        "dayDeviation" : "{{@RandomInteger}}",
+        "deflectionWeeklyAverage" : "{{@RandomInteger}}",
+        "demandPoints" : "{{@RandomInteger}}",
+        "destinationConfirmedDate" : "{{@Injection}}",
+        "destinationWarehouse" : "{{@Injection}}",
+        "detectOutOfStock" : "{{@RandomInteger}}",
+        "dynamicBufferStock" : "{{@RandomInteger}}",
+        "economicOrderQuantity" : "{{@RandomInteger}}",
+        "eoqMargin" : "{{@RandomInteger}}",
+        "eoqPeriod" : "{{@RandomInteger}}",
+        "eoqSales" : "{{@RandomInteger}}",
+        "exceptionLevel" : "{{@RandomInteger}}",
+        "exceptionalDemandLastWeek" : "{{@RandomInteger}}",
+        "exceptionalDemandMultiplier" : "{{@RandomInteger}}",
+        "excludeBOFromCO" : "{{@RandomInteger}}",
+        "excludeFirstWeeks" : "{{@RandomInteger}}",
+        "excludeMOQ" : "{{@RandomInteger}}",
+        "excludeMonths" : "{{@RandomInteger}}",
+        "flyerIndicator" : "{{@RandomInteger}}",
+        "flyerLumpyIndicator" : "{{@RandomInteger}}",
+        "frontendCertDate" : "{{@Injection}}",
+        "hierarchyPrefix" : "{{@Injection}}",
+        "holdingCost" : "{{@RandomInteger}}",
+        "imbalanceSetting" : "{{@RandomInteger}}",
+        "incrementalOrderQuantity" : "{{@RandomInteger}}",
+        "initialiseWeeks" : "{{@RandomInteger}}",
+        "interestRate" : "{{@RandomInteger}}",
+        "irregularUCMax" : "{{@RandomInteger}}",
+        "irregularUCMin" : "{{@RandomInteger}}",
+        "keepItemsNew" : "{{@RandomInteger}}",
+        "keepNewDemand" : "{{@RandomInteger}}",
+        "keepNewForecastStartWeek" : "{{@RandomInteger}}",
+        "keepNewStock" : "{{@RandomInteger}}",
+        "keepSeasonal" : "{{@RandomInteger}}",
+        "largeTrendMultiplier" : "{{@RandomInteger}}",
+        "leadTime" : "{{@RandomInteger}}",
+        "logisticsUnits" : "{{@RandomInteger}}",
+        "mFactor" : "{{@RandomInteger}}",
+        "manualFrontendCertDate" : "{{@RandomInteger}}",
+        "maxConst" : "{{@RandomInteger}}",
+        "maxConstLumpy" : "{{@RandomInteger}}",
+        "minConst" : "{{@RandomInteger}}",
+        "minConstLumpy" : "{{@RandomInteger}}",
+        "minimumBenefit" : "{{@RandomInteger}}",
+        "minimumOrderQuantity" : "{{@RandomInteger}}",
+        "minimumSeasonalFactor" : "{{@RandomInteger}}",
+        "minimumServiceLevel" : "{{@RandomInteger}}",
+        "minimumYearlyDemand" : "{{@RandomInteger}}",
+        "monthsMovingAverage" : "{{@RandomInteger}}",
+        "negativeTrendIndicator" : "{{@RandomInteger}}",
+        "newAsIrregular" : "{{@RandomInteger}}",
+        "newItemCount" : "{{@RandomInteger}}",
+        "newWeekCount" : "{{@RandomInteger}}",
+        "notOnStockFile" : "{{@RandomInteger}}",
+        "openDays" : "{{@RandomInteger}}",
+        "orderCost" : "{{@RandomInteger}}",
+        "orderExport" : "{{@RandomInteger}}",
+        "orderExportDelimiter" : "{{@RandomInteger}}",
+        "outOfStockRatio" : "{{@RandomInteger}}",
+        "outlierDetectionTransactionsEnabled" : "{{@RandomInteger}}",
+        "overwritePODuringStock" : "{{@RandomInteger}}",
+        "overwriteStockDuringStock" : "{{@RandomInteger}}",
+        "parameterCode" : "{{@Injection}}",
+        "pfAddLeadTime" : "{{@RandomInteger}}",
+        "pfNoOfWeeks" : "{{@RandomInteger}}",
+        "pfcNoOfWeeksOnDay" : "{{@RandomInteger}}",
+        "poTimeFence" : "{{@RandomInteger}}",
+        "priceDiscounts" : "{{@RandomInteger}}",
+        "pricePerDefault" : "{{@RandomInteger}}",
+        "probabilityThreshold" : "{{@RandomInteger}}",
+        "probabilityUDF" : "{{@Injection}}",
+        "promotionOverwritesForecast" : "{{@RandomInteger}}",
+        "reviewTime" : "{{@RandomInteger}}",
+        "roundDownLeadTime" : "{{@RandomInteger}}",
+        "roundOrderAmount" : "{{@RandomInteger}}",
+        "runCode" : "{{@Injection}}",
+        "seasonalDefault" : "{{@RandomInteger}}",
+        "seasonalWeightingBasedOnOrderlines" : "{{@RandomInteger}}",
+        "seasonalityAllClasses" : "{{@RandomInteger}}",
+        "selectionExports" : "{{@RandomInteger}}",
+        "setNonStocked" : "{{@RandomInteger}}",
+        "showMonTillSunColumn" : "{{@RandomInteger}}",
+        "smoothingConstant" : "{{@RandomInteger}}",
+        "smoothingFactor" : "{{@RandomInteger}}",
+        "standardDeviationNew" : "{{@RandomInteger}}",
+        "storeInitialPurchaseOrderData" : "{{@RandomInteger}}",
+        "substituteZeros" : "{{@RandomInteger}}",
+        "successiveCount" : "{{@RandomInteger}}",
+        "targetServiceLevel" : "{{@RandomInteger}}",
+        "trackingConstantCritical" : "{{@RandomInteger}}",
+        "trackingConstantWarning" : "{{@RandomInteger}}",
+        "trendIndicator" : "{{@RandomInteger}}",
+        "uD16IdentifiesSuccessor" : "{{@RandomInteger}}",
+        "useArticleDiscounts" : "{{@RandomInteger}}",
+        "useConfirmedDemand" : "{{@RandomInteger}}",
+        "useDayOfWeek" : "{{@RandomInteger}}",
+        "useEOQ" : "{{@RandomInteger}}",
+        "useHistoricalPurchaseOrderData" : "{{@RandomInteger}}",
+        "usePurchaseContract" : "{{@RandomInteger}}",
+        "useSupplierData" : "{{@RandomInteger}}",
+        "weeksOfHistoryToKeep" : "{{@RandomInteger}}"
+      },
+      "promotionControl" : {
+        "defaultBaseFactor" : "{{@RandomInteger}}",
+        "ignorePromoOnReinit" : "{{@RandomInteger}}",
+        "ignoreSmoothingWhenLinked" : "{{@RandomInteger}}",
+        "minimumBaseFactor" : "{{@RandomInteger}}",
+        "overperformThreshold" : "{{@RandomInteger}}",
+        "overwriteInsuranceInventory" : "{{@RandomInteger}}",
+        "promoLicense" : "{{@Injection}}",
+        "promoObsoleteDeleteCount" : "{{@RandomInteger}}",
+        "promotionEnabled" : "{{@RandomInteger}}",
+        "removePromotions" : "{{@RandomInteger}}",
+        "roundPromotionWeeks" : "{{@RandomInteger}}",
+        "splitPromotionDemand" : "{{@RandomInteger}}",
+        "underperformThreshold" : "{{@RandomInteger}}"
+      },
+      "trendAdjusters" : {
+        "adjuster1" : "{{@RandomInteger}}",
+        "adjuster10" : "{{@RandomInteger}}",
+        "adjuster11" : "{{@RandomInteger}}",
+        "adjuster12" : "{{@RandomInteger}}",
+        "adjuster2" : "{{@RandomInteger}}",
+        "adjuster3" : "{{@RandomInteger}}",
+        "adjuster4" : "{{@RandomInteger}}",
+        "adjuster5" : "{{@RandomInteger}}",
+        "adjuster6" : "{{@RandomInteger}}",
+        "adjuster7" : "{{@RandomInteger}}",
+        "adjuster8" : "{{@RandomInteger}}",
+        "adjuster9" : "{{@RandomInteger}}",
+        "trendAdjustersCode" : "{{@Injection}}"
+      }
+    }
+  inactive: false
+useCategoryAssertion: false
+assertions:
+- '@ResponseTime < 7000'
+cleanup: []
+severity: Medium
+category: sql_stored_procedure_injection
+tags:
+- V1
+- OWASP-API8
+- '[PCI DSS 3.0] 6.5.1'
+- '[PCI DSS 3.2.1] 6.5.1'
+- OWASP - OTG-INPVAL-005
+- OWASP API Security Top 10
+- Injection
+- Intrusive
+- '[2020 CWE TOP 6] CWE - 89'
+inactive: false
+policies:
+  initExec: Request
+  cleanupExec: Request
+  logger: DEBUG
+  timeoutSeconds: 300
+  repeatOnFailure: 0
+  repeat: 0
+  repeatModule: ""
+  repeatDelay: 0
+  unmaskToken: false
+  postExecutionDelay: 0
+autoGenerated: true

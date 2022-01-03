@@ -1,0 +1,168 @@
+---
+parent: Api_promotions_triggermove
+name: ApiPromotionsTriggermovePostBodyParamXssInjection
+description: '**PreAuthorize:** hasPermission(authentication, ''promotions_write'')'
+authors:
+- apisec Bot
+type: SUITE
+init: []
+path: /api/promotions/triggermove
+endpoint: /api/promotions/triggermove
+method: POST
+auth: Default
+headers:
+- 'Accept: application/json'
+- 'Content-Type: application/json'
+testCases:
+- id: 1
+  body: |-
+    {
+      "accepted" : "{{@RandomInteger}}",
+      "autoAccept" : "{{@RandomInteger}}",
+      "averageLift" : "{{@RandomInteger}}",
+      "averageLiftVolume" : "{{@RandomInteger}}",
+      "dayDistributionProfile" : {
+        "dayDistributionProfile" : "{{@Injection}}",
+        "defaultProfile" : "{{@RandomInteger}}",
+        "description" : "{{@Injection}}",
+        "distributionsPerDay" : [ {
+          "adjustment" : "{{@RandomInteger}}",
+          "dayDistributionProfile" : "{{@Random}}",
+          "dayNo" : "{{@RandomInteger}}"
+        } ],
+        "includeDayWeighting" : "{{@RandomInteger}}",
+        "lowVolumeProfile" : "{{@RandomInteger}}",
+        "numberOfDays" : "{{@RandomInteger}}",
+        "startDayOfWeek" : "{{@RandomInteger}}",
+        "total" : "{{@RandomInteger}}"
+      },
+      "dayDistributionProfiles" : [ {
+        "dayDistributionProfile" : "{{@Random}}",
+        "defaultProfile" : "{{@RandomInteger}}",
+        "description" : "{{@Random}}",
+        "distributionsPerDay" : [ {
+          "adjustment" : "{{@RandomInteger}}",
+          "dayDistributionProfile" : "{{@Random}}",
+          "dayNo" : "{{@RandomInteger}}"
+        } ],
+        "includeDayWeighting" : "{{@RandomInteger}}",
+        "lowVolumeProfile" : "{{@RandomInteger}}",
+        "numberOfDays" : "{{@RandomInteger}}",
+        "startDayOfWeek" : "{{@RandomInteger}}",
+        "total" : "{{@RandomInteger}}"
+      } ],
+      "dayMilestone" : "{{@Injection}}",
+      "differentStatusWarning" : "{{@RandomInteger}}",
+      "endDate" : "{{@Injection}}",
+      "eventCategory" : "{{@Injection}}",
+      "eventCharacteristic1" : "{{@Injection}}",
+      "eventCharacteristic2" : "{{@Injection}}",
+      "eventCharacteristic3" : "{{@Injection}}",
+      "eventID" : "{{@Injection}}",
+      "eventLock" : "{{@RandomInteger}}",
+      "excludedPromotion" : "{{@RandomInteger}}",
+      "filteredOut" : false,
+      "firstIntakeDays" : "{{@RandomInteger}}",
+      "firstIntakeVolume" : "{{@RandomInteger}}",
+      "liftWarning" : "{{@RandomInteger}}",
+      "locationFirstIntakeDays" : "{{@RandomInteger}}",
+      "locationFirstIntakeVolume" : "{{@RandomInteger}}",
+      "mainEventID" : "{{@Injection}}",
+      "moveToStatus" : "{{@RandomInteger}}",
+      "numberOfArticles" : "{{@RandomInteger}}",
+      "numberOfLocations" : "{{@RandomInteger}}",
+      "obsoleteWarning" : "{{@RandomInteger}}",
+      "promotionDuration" : "{{@RandomInteger}}",
+      "promotionName" : "{{@Injection}}",
+      "promotionProfile" : {
+        "aggregateLocationPromotionVolume" : "{{@RandomInteger}}",
+        "autoAccept" : "{{@RandomInteger}}",
+        "centralWarehouse" : "{{@Injection}}",
+        "confidenceInterval" : "{{@RandomInteger}}",
+        "dayMilestone" : "{{@Injection}}",
+        "defaultLiftFactor" : "{{@RandomInteger}}",
+        "description" : "{{@Injection}}",
+        "eventCharacteristic1" : "{{@Injection}}",
+        "eventCharacteristic2" : "{{@Injection}}",
+        "eventCharacteristic3" : "{{@Injection}}",
+        "extraLeadTime" : "{{@RandomInteger}}",
+        "fileDelimiter" : "{{@Injection}}",
+        "firstIntakeDays" : "{{@RandomInteger}}",
+        "firstIntakeVolume" : "{{@RandomInteger}}",
+        "groupBy1" : "{{@Injection}}",
+        "groupBy2" : "{{@Injection}}",
+        "ignoreFirstLine" : "{{@RandomInteger}}",
+        "jsonString" : "{{@Injection}}",
+        "locationExtraLeadTime" : "{{@RandomInteger}}",
+        "locationFirstIntakeDays" : "{{@RandomInteger}}",
+        "locationFirstIntakeVolume" : "{{@RandomInteger}}",
+        "locationOrderAllAtOnce" : "{{@RandomInteger}}",
+        "locationSelection" : "{{@Injection}}",
+        "lowVolumeThreshold" : "{{@RandomInteger}}",
+        "maxLift" : "{{@RandomInteger}}",
+        "maximumIndex" : "{{@Injection}}",
+        "maximumValue" : "{{@RandomInteger}}",
+        "minimumFixedPeriodParameter" : "{{@RandomInteger}}",
+        "minimumGroupByParameter" : "{{@RandomInteger}}",
+        "minimumIndex" : "{{@Injection}}",
+        "minimumNonZeroForecastPercentage" : "{{@RandomInteger}}",
+        "minimumValue" : "{{@RandomInteger}}",
+        "multiLevel" : "{{@RandomInteger}}",
+        "newProfileId" : "{{@Injection}}",
+        "numberOfMonths" : "{{@RandomInteger}}",
+        "obsoleteDays" : "{{@RandomInteger}}",
+        "orderAllAtOnce" : "{{@RandomInteger}}",
+        "overperforming" : "{{@RandomInteger}}",
+        "pageRows" : "{{@RandomInteger}}",
+        "priceToUse" : "{{@Injection}}",
+        "profileId" : "{{@Injection}}",
+        "promotionEffect" : "{{@Injection}}",
+        "promotionTypes" : [ "{{@Random}}" ],
+        "psEndDateOffset" : "{{@RandomInteger}}",
+        "psStartDateOffset" : "{{@RandomInteger}}",
+        "salesIndex" : "{{@Injection}}",
+        "samplingError" : "{{@RandomInteger}}",
+        "scaleOnBaseForecast" : "{{@RandomInteger}}",
+        "sumByIndex" : "{{@Injection}}",
+        "underperforming" : "{{@RandomInteger}}"
+      },
+      "promotionType" : "{{@Injection}}",
+      "realisedLift" : "{{@RandomInteger}}",
+      "startDate" : "{{@Injection}}",
+      "status" : "{{@RandomInteger}}"
+    }
+  inactive: false
+useCategoryAssertion: false
+assertions:
+- '@StatusCode != 200 OR @Response.success == false OR @Response.success == true'
+cleanup: []
+severity: Medium
+category: XSS_Injection
+tags:
+- V1
+- OWASP-API8
+- '[PCI DSS 3.0] 6.5.7'
+- '[PCI DSS 3.2] 6.5.7'
+- '[PCI DSS 3.2.1] 6.5.7'
+- OWASP - OTG-INPVAL-001
+- OWASP - OTG-INPVAL-002
+- OWASP API Security Top 10
+- Excessive Data Exposure
+- Security Misconfiguration
+- INPUT VALIDATION
+- NON-INTRUSIVE
+- '[2020 CWE TOP 1 ] CWE - 79'
+- '[MITRE ATT&CK] T1190'
+inactive: false
+policies:
+  initExec: Request
+  cleanupExec: Request
+  logger: DEBUG
+  timeoutSeconds: 300
+  repeatOnFailure: 0
+  repeat: 0
+  repeatModule: '@APIsec/Common/XSS_Injection_Strings'
+  repeatDelay: 0
+  unmaskToken: false
+  postExecutionDelay: 0
+autoGenerated: true
