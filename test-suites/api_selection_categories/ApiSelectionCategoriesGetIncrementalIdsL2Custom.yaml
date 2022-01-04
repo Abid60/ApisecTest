@@ -9,7 +9,7 @@ init: []
 path: /api/selection/categories
 endpoint: /api/selection/categories
 method: GET
-auth: Default
+auth: UserA
 headers:
 - 'Accept: application/json'
 - 'Content-Type: application/json'
