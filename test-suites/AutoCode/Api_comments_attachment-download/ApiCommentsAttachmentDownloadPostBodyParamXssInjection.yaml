@@ -9,7 +9,7 @@ init: []
 path: /api/comments/attachment-download
 endpoint: /api/comments/attachment-download
 method: POST
-auth: UserA
+auth: Default
 headers:
 - 'Accept: application/octet-stream'
 - 'Content-Type: application/json'
